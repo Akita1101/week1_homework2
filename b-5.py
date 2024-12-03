@@ -16,18 +16,27 @@ def total_value(numbers):
 
 
 def max_value(numbers):
-    maximum = max(numbers)
+    maximum = numbers[0]
+    for number in numbers:
+        if number > maximum:
+            maximum = number
     return maximum
 
 
 def min_value(numbers):
-    minimum = min(numbers)
+    minimum = numbers[0]
+    for number in numbers:
+        if number < minimum:
+            minimum = number
     return minimum
 
 
 def avg_value(numbers):
     total = total_value(numbers)
-    average = total / len(numbers)
+    count = 0
+    for number in numbers:
+        count += 1
+    average = total / count
     return int(average)
 
 
